@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Digital Store</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light Slate 50 */
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-md p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
+            <a href="#" class="text-2xl font-bold text-gray-800 rounded-md p-2 hover:bg-gray-100 transition-colors">Digital Goods Hub</a>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#products" class="text-gray-600 hover:text-blue-600 font-medium rounded-md p-2 hover:bg-gray-100 transition-colors">Products</a></li>
+                    <li><a href="#about" class="text-gray-600 hover:text-blue-600 font-medium rounded-md p-2 hover:bg-gray-100 transition-colors">About</a></li>
+                    <li><a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium rounded-md p-2 hover:bg-gray-100 transition-colors">Contact</a></li>
+                    <li>
+                        <button id="cartButton" class="relative text-gray-600 hover:text-blue-600 font-medium rounded-md p-2 hover:bg-gray-100 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <span id="cartCount" class="absolute -top-1 -right-1 bg-blue-500 text-white text-xs font-bold rounded-full h-4 w-4 flex items-center justify-center hidden">0</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto p-8">
+        <!-- Hero Section -->
+        <section class="text-center py-16 bg-blue-600 text-white rounded-lg shadow-lg mb-12">
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">Unlock Your Potential with Digital Guides</h1>
+            <p class="text-lg sm:text-xl mb-8 max-w-2xl mx-auto">Discover high-quality guides on making money and home buying to boost your financial literacy.</p>
+            <a href="#products" class="bg-white text-blue-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-100 transition-colors shadow-lg">Explore Guides</a>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="py-12">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-10">Our Digital Collection</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- New Product Card 1: Online Freelancing Guide -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/FFD700/000000?text=Freelance+Guide" alt="Online Freelancing Guide" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Online Freelancing Kickstart Guide</h3>
+                        <p class="text-gray-600 text-sm mb-4">Your essential guide to starting and succeeding in the world of online freelancing.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-blue-600">$10.00</span>
+                            <button class="add-to-cart-btn bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors shadow-md" data-product-id="9" data-product-name="Freelancing Guide">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Product Card 2: Dropshipping Guide -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/90EE90/000000?text=Dropshipping+Guide" alt="Dropshipping Guide" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Beginner's Guide to Dropshipping</h3>
+                        <p class="text-gray-600 text-sm mb-4">Learn how to set up and manage your first successful dropshipping business online.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-blue-600">$10.00</span>
+                            <button class="add-to-cart-btn bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors shadow-md" data-product-id="10" data-product-name="Dropshipping Guide">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Product Card 3: Affiliate Marketing Guide -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/ADD8E6/000000?text=Affiliate+Guide" alt="Affiliate Marketing Guide" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Affiliate Marketing Blueprint</h3>
+                        <p class="text-gray-600 text-sm mb-4">Unlock the secrets to earning passive income through effective affiliate marketing strategies.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-blue-600">$10.00</span>
+                            <button class="add-to-cart-btn bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors shadow-md" data-product-id="11" data-product-name="Affiliate Marketing Guide">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card: Tips for Buying and Reselling a Home -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/DDA0DD/000000?text=Home+Tips+Guide" alt="Home Buying & Reselling Tips Guide" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Tips for Buying & Reselling a Home</h3>
+                        <p class="text-gray-600 text-sm mb-4">Essential strategies to maximize your profit when buying and selling real estate.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-blue-600">$10.00</span>
+                            <button class="add-to-cart-btn bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors shadow-md" data-product-id="7" data-product-name="Home Tips Guide">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card: The Process of Using the VA Loan -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-scale-105">
+                    <img src="https://placehold.co/600x400/8FBC8F/000000?text=VA+Loan+Guide" alt="VA Loan Process Guide" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">The Process of Using the VA Loan</h3>
+                        <p class="text-gray-600 text-sm mb-4">A step-by-step guide for veterans to navigate the VA home loan process.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-blue-600">$10.00</span>
+                            <button class="add-to-cart-btn bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors shadow-md" data-product-id="8" data-product-name="VA Loan Guide">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Product Card 4: First-Time Homebuyer Checklist -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/F0E68C/000000?text=Homebuyer+Checklist" alt="First-Time Homebuyer Checklist" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">First-Time Homebuyer Checklist</h3>
+                        <p class="text-gray-600 text-sm mb-4">A comprehensive checklist to guide you through your first home purchase.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-blue-600">$10.00</span>
+                            <button class="add-to-cart-btn bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors shadow-md" data-product-id="12" data-product-name="Homebuyer Checklist">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Product Card 5: Real Estate Investment Basics -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/87CEEB/000000?text=Real+Estate+Investing" alt="Real Estate Investment Basics" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Real Estate Investment Basics</h3>
+                        <p class="text-gray-600 text-sm mb-4">Understand the fundamentals of investing in real estate for long-term wealth.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-blue-600">$10.00</span>
+                            <button class="add-to-cart-btn bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors shadow-md" data-product-id="13" data-product-name="Real Estate Investing">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <p class="mb-4">&copy; 2025 Digital Goods Hub. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for Add to Cart functionality
+        let cartItemCount = 0;
+        const cartCountElement = document.getElementById('cartCount');
+        const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                cartItemCount++;
+                cartCountElement.textContent = cartItemCount;
+                cartCountElement.classList.remove('hidden'); // Show cart count
+                
+                // Optional: Provide visual feedback to the user
+                button.textContent = 'Added!';
+                button.classList.remove('bg-blue-500', 'hover:bg-blue-600');
+                button.classList.add('bg-green-500', 'cursor-not-allowed');
+                button.disabled = true;
+
+                // Revert button text and style after a short delay
+                setTimeout(() => {
+                    button.textContent = 'Add to Cart';
+                    button.classList.remove('bg-green-500', 'cursor-not-allowed');
+                    button.classList.add('bg-blue-500', 'hover:bg-blue-600');
+                    button.disabled = false;
+                }, 1500); // Revert after 1.5 seconds
+            });
+        });
+    </script>
+</body>
+</html>
